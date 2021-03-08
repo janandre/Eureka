@@ -38,8 +38,8 @@ extension DatePickerRowProtocol {
         // For Xcode 11.4 and above
         #if swift(>=5.2)
             if #available(iOS 14.0, *) {
-                #if swift(>=5.3) && !(os(OSX) || (os(iOS) && targetEnvironment(macCatalyst)))
-                    cell.datePicker.preferredDatePickerStyle = .automatic
+                #if swift(>=5.3) && !(os(OSX) || (os(iOS) && !(targetEnvironment(macCatalyst))))
+                    cell.datePicker.preferredDatePickerStyle = .wheels
                 #else
                     cell.datePicker.preferredDatePickerStyle = .automatic
                 #endif

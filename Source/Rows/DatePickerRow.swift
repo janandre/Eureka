@@ -57,8 +57,8 @@ open class DatePickerCell: Cell<Date>, CellType {
         if datePicker.datePickerMode != .countDownTimer {
             #if swift(>=5.2)
                 if #available(iOS 14.0, *) {
-                    #if swift(>=5.3) && !(os(OSX) || (os(iOS) && targetEnvironment(macCatalyst)))
-                        datePicker.preferredDatePickerStyle = .automatic
+                    #if swift(>=5.3) && !(os(OSX) || (os(iOS) && !(targetEnvironment(macCatalyst))))
+                        datePicker.preferredDatePickerStyle = .wheels
                     #else
                         datePicker.preferredDatePickerStyle = .automatic
                     #endif
