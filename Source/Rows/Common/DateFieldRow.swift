@@ -54,7 +54,7 @@ open class DateCell: Cell<Date>, CellType {
 
         #if swift(>=5.2)
             if #available(iOS 13.4, *) {
-                datePicker.preferredDatePickerStyle = .wheels
+                datePicker.preferredDatePickerStyle = .automatic
             }
         #endif
     }

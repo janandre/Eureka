@@ -39,13 +39,13 @@ extension DatePickerRowProtocol {
         #if swift(>=5.2)
             if #available(iOS 14.0, *) {
                 #if swift(>=5.3) && !(os(OSX) || (os(iOS) && targetEnvironment(macCatalyst)))
-                    cell.datePicker.preferredDatePickerStyle = .inline
+                    cell.datePicker.preferredDatePickerStyle = .automatic
                 #else
-                    cell.datePicker.preferredDatePickerStyle = .wheels
+                    cell.datePicker.preferredDatePickerStyle = .automatic
                 #endif
             }
             else if #available(iOS 13.4, *) {
-                cell.datePicker.preferredDatePickerStyle = .wheels
+                cell.datePicker.preferredDatePickerStyle = .automatic
             }
         #endif
     }

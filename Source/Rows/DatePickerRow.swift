@@ -58,12 +58,12 @@ open class DatePickerCell: Cell<Date>, CellType {
             #if swift(>=5.2)
                 if #available(iOS 14.0, *) {
                     #if swift(>=5.3) && !(os(OSX) || (os(iOS) && targetEnvironment(macCatalyst)))
-                        datePicker.preferredDatePickerStyle = .inline
+                        datePicker.preferredDatePickerStyle = .automatic
                     #else
-                        datePicker.preferredDatePickerStyle = .wheels
+                        datePicker.preferredDatePickerStyle = .automatic
                     #endif
                 } else if #available(iOS 13.4, *) {
-                    datePicker.preferredDatePickerStyle = .wheels
+                    datePicker.preferredDatePickerStyle = .automatic
                 }
              #endif
         }
